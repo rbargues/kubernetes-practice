@@ -8,7 +8,7 @@ CREATE TABLE public.nodes (
       node_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
       node_name VARCHAR NOT NULL,
       used_cpu VARCHAR NOT NULL,
-      used_memoery VARCHAR NOT NULL
+      used_memory VARCHAR NOT NULL
 );
 CREATE TABLE public.containers (
       container_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
