@@ -1,3 +1,15 @@
+CREATE TABLE public.pods (
+      pod_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+      pod_name VARCHAR NOT NULL,
+      tm TIMESTAMP NOT NULL,
+      pod_status VARCHAR NOT NULL
+);
+CREATE TABLE public.nodes (
+      node_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+      node_name VARCHAR NOT NULL,
+      used_cpu VARCHAR NOT NULL,
+      used_memoery VARCHAR NOT NULL
+);
 CREATE TABLE public.containers (
       container_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
       container_name VARCHAR NOT NULL,
@@ -10,16 +22,4 @@ CREATE TABLE public.containers (
       memory_used VARCHAR NOT NULL,
       cpu_percent NUMERIC (6,3) NOT NULL,
       memory_percent NUMERIC (6,3) NOT NULL 
-);
-CREATE TABLE public.nodes (
-      node_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-      node_name VARCHAR NOT NULL,
-      used_cpu VARCHAR NOT NULL,
-      used_memoery VARCHAR NOT NULL
-);
-CREATE TABLE public.pods (
-      pod_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-      pod_name VARCHAR NOT NULL,
-      tm TIMESTAMP NOT NULL,
-      pod_status VARCHAR NOT NULL
 );
