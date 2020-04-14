@@ -1,5 +1,5 @@
 CREATE TABLE public.metrics_server (
-      api VARCHAR NOT NULL,
+      api VARCHAR NOT NULL UNIQUE,
       token VARCHAR NOT NULL
 );
 CREATE TABLE public.nodes (
