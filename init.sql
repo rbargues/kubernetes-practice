@@ -1,3 +1,7 @@
+CREATE TABLE public.metrics_server (
+      api VARCHAR NOT NULL,
+      token VARCHAR NOT NULL
+);
 CREATE TABLE public.nodes (
       node_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
       node_name VARCHAR NOT NULL UNIQUE,
