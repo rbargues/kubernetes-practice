@@ -28,6 +28,5 @@ CREATE TABLE public.containers (
       memory_used VARCHAR,
       cpu_percent NUMERIC (6,3),
       memory_percent NUMERIC (6,3),
-      UNIQUE (pod_name, tm)
-
+      UNIQUE (container_name, tm)
 );
